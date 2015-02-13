@@ -90,5 +90,3 @@ int vector_footprint(vector *v) {
 }
 
 #endif
-
-
