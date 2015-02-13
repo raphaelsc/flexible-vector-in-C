@@ -58,7 +58,7 @@ inline void *vector_access(vector *v, int i) {
     return (void *)((char *)v->data + offset);
 }
 
-inline int vector_length(vector *v) {
+inline int vector_size(vector *v) {
     return v->size;
 }
 

@@ -68,7 +68,7 @@ int main(int argc, char **argv) {
     search(argv[1], (argc == 2) ? NULL : argv[2], &v, 3);
 
     int i;
-    for (i = i; i < vector_length(&v); i++) {
+    for (i = i; i < vector_size(&v); i++) {
         struct dirent *entry = vector_access(&v, i);
         printf("%s\n", entry->d_name);
     }
