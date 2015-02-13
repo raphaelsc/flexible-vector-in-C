@@ -36,6 +36,7 @@ typedef struct vector {
 
 vector vector_create(float growth_factor, int type_size) {
     static const int initial_capacity = 10;
+    assert(growth_factor > 1.0f);
     vector new = {
         .data = malloc(initial_capacity * type_size),
         .growth_factor = growth_factor,
