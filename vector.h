@@ -68,7 +68,7 @@ void *vector_insert(vector *v, void *object) {
     assert(v->size <= v->capacity);
     if (v->size == v->capacity) {
         // increase vector capacity by growth factor.
-        int new_capacity = (int) (v->capacity * v->growth_factor);
+        int new_capacity = (int) (v->capacity * v->growth_factor + 1);
         v->data = realloc(v->data, new_capacity * v->type_size);
         assert(v->data != NULL);
         v->capacity = new_capacity;
