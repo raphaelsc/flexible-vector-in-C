@@ -53,13 +53,13 @@ void vector_destroy(vector *v) {
     memset((void *) v, 0, sizeof(vector));
 }
 
-inline void *vector_access(vector *v, int i) {
+static inline void *vector_access(vector *v, int i) {
     assert(i >= 0 && i < v->capacity);
     unsigned offset = i * v->type_size;
     return (void *)((char *)v->data + offset);
 }
 
-inline int vector_size(vector *v) {
+static inline int vector_size(vector *v) {
     return v->size;
 }
 

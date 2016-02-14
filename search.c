@@ -67,7 +67,7 @@ int main(int argc, char **argv) {
         fprintf(stderr, "%s <path> <string>\n", argv[0]);
         return -1;
     }
-    
+
     vector v = vector_create(1.75f, sizeof(struct dirent));
     search(argv[1], (argc == 2) ? NULL : argv[2], &v, 3);
 
@@ -76,7 +76,7 @@ int main(int argc, char **argv) {
         struct dirent *entry = vector_access(&v, i);
         printf("%s\n", entry->d_name);
     }
-    
+
     printf("vector footprint: %d\n", vector_footprint(&v));
 
     vector_destroy(&v);
